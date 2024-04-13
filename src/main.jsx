@@ -9,6 +9,8 @@ import "./index.css";
 import ErrorPage from "./error-page";
 import Contact, {
   loader as contactLoader,
+  action as contactAction,
+
 } from "./routes/contact";
 
 import Root, {
@@ -43,6 +45,7 @@ const router = createBrowserRouter([
         path: "contacts/:contactId",
         element: <Contact />,
         loader: contactLoader,
+        action: contactAction,
 
       },
       {
